@@ -1,5 +1,5 @@
 class cID {
 	public:
-		string first_name;
-		string last_name;
+		std::string first_name;
+		std::string last_name;
 };
