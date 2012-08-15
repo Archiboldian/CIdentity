@@ -11,18 +11,13 @@ using namespace std;
 
 int main(){
 	
-	cIDLIST idlst;
-	idlst.addID(("James"),("Davids"));
-	idlst.addID(("Harry"),("Barns"));
-	idlst.addID(("Arthur"),("Rickold"));
-	idlst.addID(("John"),("Smith"));
+	cIDLIST IDs;
+	IDs.loadDICT("namedictionary.ndict");
 	
-	cID rndcid = idlst.getRND();
-	cout << rndcid.first_name << " " << rndcid.last_name << endl;
-	rndcid = idlst.getRND();
-	cout << rndcid.first_name << " " << rndcid.last_name << endl;
-	rndcid = idlst.getRND();
-	cout << rndcid.first_name << " " << rndcid.last_name << endl;
+	for(int i;i<10;i++){
+		cID rndcid = IDs.getRND();
+		cout << rndcid.first_name << " " << rndcid.last_name << endl;
+	}
 	
 	return 0;
 }
